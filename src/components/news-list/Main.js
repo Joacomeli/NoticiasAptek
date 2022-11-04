@@ -21,7 +21,7 @@ export default function Main({ }) {
             <div className="newsList">
                     {articles.map((articles) => (
                         
-                            <div className="card">   
+                            <div className="noticias">   
                             <NewsItem 
                                 title={articles.title}
                                 description={articles.description}
