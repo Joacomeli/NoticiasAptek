@@ -17,7 +17,7 @@ export default function Main({ }) {
 
     return (
         <div className="news-list">
-            <h1>Noticias</h1>
+            <h1>Nuevas Noticias</h1>
             <div className="newsList">
                     {articles.map((articles) => (
                         
