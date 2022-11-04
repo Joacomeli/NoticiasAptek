@@ -1,12 +1,13 @@
-import './App.css';
+import './assets/css/App.css';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Administrador from './views/administrador/Main';
+import Login from './views/login/Main';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <a>Xd los pibes</a>
-      </header>
-    </div>
+    
+      <Administrador />
   );
 }
 
