@@ -1,5 +1,5 @@
 
-let BaseURL = "http://localhost:82";
+let BaseURL = "https://halogen-oxide-353818.rj.r.appspot.com";
 
 export function serverCallURL(id) {
   

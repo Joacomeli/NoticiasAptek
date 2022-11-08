@@ -17,7 +17,7 @@ try{
     secure: true,
     auth: {
       user: 'apikey',
-      pass: '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'
+      pass: ''
     }
   });
 }catch (e) {

@@ -19,7 +19,7 @@ export const LoginPage = () => {
 
   const handleSend = (user, password) => {
  
-    fetch("http://localhost:82/api/auth/login", {
+    fetch("https://halogen-oxide-353818.rj.r.appspot.com/api/auth/login", {
      method: "POST",
      headers: {
        "Content-Type": "application/json",
