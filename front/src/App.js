@@ -1,20 +1,17 @@
-import './assets/css/App.css';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Administrador from './views/administrador/Main';
-import {LoginPage} from './views/login/Main';
-import Router from './router';
-import { AuthProvider } from './contextAPI/authHook';
-
+import "./assets/css/App.css";
+import React from "react";
+import { BrowserRouter } from "react-router-dom";
+import { AuthProvider } from "./contextAPI/authHook";
+import Router from "./router";
 
 function App() {
   return (
     <BrowserRouter>
-    <AuthProvider>
-    <Router></Router>
-    </AuthProvider>
+      <AuthProvider>
+        <Router />
+      </AuthProvider>
     </BrowserRouter>
   );
-
 }
 
 export default App;

@@ -4,6 +4,7 @@ import Administrador from "../views/administrador/Main";
 import { LoginPage } from "../views/login/Main";
 import { useAuth } from "../contextAPI/authHook";
 import Gestion from "../views/gestion/Main";
+import { React } from "react";
 
 function Router() {
   const { ProtectedRoute } = useAuth();
@@ -14,7 +15,7 @@ function Router() {
         <ProtectedRoute>
           <Gestion />
         </ProtectedRoute>
-      )
+      ),
     },
     {
       path: "/login",
@@ -28,7 +29,6 @@ function Router() {
       path: "/",
       element: <Administrador />,
     },
-
   ];
 
   return useRoutes(routes);

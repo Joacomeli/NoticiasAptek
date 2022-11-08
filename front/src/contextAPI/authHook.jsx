@@ -1,9 +1,9 @@
 import { createContext, useContext, useMemo } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
 import { useLocalStorage } from "./useLocalStorage";
-
+import { React } from "react";
 const AuthContext = createContext();
-
+//import { AuthContext } from './components/authContext.js';
 
 
 export const AuthProvider = ({ children }) => {
@@ -39,7 +39,7 @@ export const AuthProvider = ({ children }) => {
       logout,
       ProtectedRoute
     }),
-    [user]
+    [user, login, logout, ProtectedRoute]
   );
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 };

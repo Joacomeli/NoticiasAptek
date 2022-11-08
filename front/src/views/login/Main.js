@@ -1,7 +1,8 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "../../assets/css/login.css";
 import { Login } from "../../components/login/Main";
 import { useAuth } from "../../contextAPI/authHook";
+import { React } from "react";
 
 export const LoginPage = () => {
     const [user, setUser] = useState("");
@@ -16,11 +17,8 @@ export const LoginPage = () => {
     setPassword(e.target.value);
   };
 
-
-
   const handleSend = (user, password) => {
  
-   
     fetch("http://localhost:82/api/auth/login", {
      method: "POST",
      headers: {
@@ -62,7 +60,7 @@ export const LoginPage = () => {
             <input
               value={password}
               onChange={handleChangepassword}
-              type="text"
+              type="password"
               placeholder="Contraseña"
             />
           </div>

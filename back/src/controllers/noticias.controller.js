@@ -18,7 +18,7 @@ exports.addnoticiasController = async (req, res, next) => {
   }
 };
 
-exports.getnoticiasByIdController = async (req, res, next) => {
+exports.getnoticiasById = async (req, res, next) => {
   try {
     const noticias = await Getnoticias({_id:req.params.id});
     
@@ -30,9 +30,15 @@ exports.getnoticiasByIdController = async (req, res, next) => {
 
 exports.getnoticiasController = async (req, res, next) => {
   try {
+    if(req.params.filter){
+      const noticias = await Getnoticias({estado:true});
+      return res.json({ data:  noticias });
+    }else{
+
     const noticias = await Getnoticias();
     
     return res.json({ data:  noticias });
+    }
   } catch (error) {
     next(error);
   }

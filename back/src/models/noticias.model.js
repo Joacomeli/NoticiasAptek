@@ -12,7 +12,12 @@ var noticiasSchema = new Schema(
       required: false,
       trim: true,
     },
-    Imagen: {
+    imagen: {
+      type: String,
+      required: false,
+      trim: true,
+    },
+    avatar: {
       type: String,
       required: false,
       trim: true,
@@ -27,6 +32,11 @@ var noticiasSchema = new Schema(
       required: false,
       trim: true,
       default:false
+    },
+    textArea: {
+      type: String,
+      required: false,
+      trim: true,
     },
   },
 
